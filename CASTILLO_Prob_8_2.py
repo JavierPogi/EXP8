@@ -1,0 +1,18 @@
+import pandas as pd
+
+cars=pd.read_csv('cars.csv')
+print(cars.iloc[0:5,0:12:2])
+print(cars.loc[cars['Model']=='Mazda RX4'])
+print(cars.loc[cars['Model']=='Camaro Z28']['cyl'])
+print('\n')
+print('Mazda RX4 Wag\n')
+print(cars.loc[cars.Model=='Mazda RX4 Wag']['cyl'])
+print(cars.loc[cars.Model=='Mazda RX4 Wag']['gear'])
+print('\n')
+print('Ford Panera\n')
+print(cars.loc[cars.Model=='Ford Pantera L']['cyl'])
+print(cars.loc[cars.Model=='Ford Pantera L']['gear'])
+print('\n')
+print('Honda Civic\n')
+print(cars.loc[cars.Model=='Honda Civic']['cyl'])
+print(cars.loc[cars.Model=='Honda Civic']['gear'])
